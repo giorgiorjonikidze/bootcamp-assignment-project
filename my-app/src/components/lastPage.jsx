@@ -1,5 +1,7 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
+import lastPageImg from "./images/Frame.svg";
+import "./lastPage.css";
 
 const LastPage = () => {
   const history = useHistory();
@@ -12,10 +14,17 @@ const LastPage = () => {
     history.push(path);
   };
   return (
-    <div>
-      <img />
-      <button onClick={redirectToList}>სიაში გადაყვანა</button>
-      <button onClick={redirectToLanding}>მთავარი</button>
+    <div className="main-block">
+      <div className="wrapper">
+        <img src={lastPageImg} />
+        <p className="">ჩანაწერი დამატებულია</p>
+        <button className="btn btn-to-list" onClick={redirectToList}>
+          სიაში გადაყვანა
+        </button>
+        <button className="btn-to-main" onClick={redirectToLanding}>
+          მთავარი
+        </button>
+      </div>
     </div>
   );
 };

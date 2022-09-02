@@ -1,5 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import { useHistory } from 'react-router-dom';
+import backButton from "./images/Group 4.svg"
+import redberryLogo from './images/LOGO-10 2.svg'
+import "./workerForm.css"
 
 
 
@@ -46,11 +49,11 @@ const WorkerForm = () => {
   return (
     <div className="wrapper-container">
       <div className="header">
-        <button onClick={backToLandinPage}>
-          <img src="/images/Group 4.svg" alt="" />
+        <button onClick={backToLandinPage} className="back-button-header">
+          <img src={backButton} alt="" />
         </button>
         <div className="title-wrapper">
-          <p className="Nameworker-info">თანამშრომელიბის ინფო</p>
+          <p className="worker-info">თანამშრომელიბის ინფო</p>
           <div className="underline"></div>
         </div>
         <div>
@@ -62,16 +65,16 @@ const WorkerForm = () => {
           <div className="name-surname-block">
             <div className="name-input-block">
               <label for="name">სახელი</label>
-              <input className="input" type="text" placeholder="input" />
-              <p>მინიმუმ 2 სიმბოლო, ქართული ასოები</p>
+              <input className="input input-name" type="text" placeholder="input" />
+              <p className='form-requirements'>მინიმუმ 2 სიმბოლო, ქართული ასოები</p>
             </div>
             <div className="surname-input-block">
               <label for="surname">გვარი</label>
-              <input className="input" type="text" placeholder="input" />
-              <p>მინიმუმ 2 სიმბოლო, ქართული ასოები</p>
+              <input className="input input-surname" type="text" placeholder="input" />
+              <p className='form-requirements'>მინიმუმ 2 სიმბოლო, ქართული ასოები</p>
             </div>
           </div>
-          <select className="select" name="" id="">
+          <select className="select" name="gela" id="" placeholder='gela'>
             <option value="">თიმი</option>
             {teams}
           </select>
@@ -83,18 +86,19 @@ const WorkerForm = () => {
           <div className="mail-input">
             <label for="mail">მეილი</label>
             <input className="input" type="text" placeholder="input" />
-            <p>უნდა მთავრდებოდეს @redberry.com-ით</p>
+            <p className='form-requirements'>უნდა მთავრდებოდეს @redberry.com-ით</p>
           </div>
           <div className="tel-input">
             <label for="surname">ტელეფონის ნომერი</label>
             <input className="input" type="text" placeholder="input" />
-            <p>უნდა აკმაყოფილებდეს ქართული მობ-ნომრის ფორმატს</p>
+            <p className='form-requirements'>უნდა აკმაყოფილებდეს ქართული მობ-ნომრის ფორმატს</p>
           </div>
           <div className="btn-block">
-            <button onClick={nextPageHandler} className="btn">შემდეგი</button>
+            <button onClick={nextPageHandler} className="btn btn-workerform">შემდეგი</button>
           </div>
         </form>
       </div>
+      <img className='footer-logo' src={redberryLogo} />
     </div>
   );
 };

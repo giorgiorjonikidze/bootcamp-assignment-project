@@ -1,0 +1,24 @@
+@font-face {
+    font-family: HelveticaNeue;
+    src: url(./fonts/HelveticaNeue.ttc);
+  }
+
+.first-section-block img{
+    width: 577px;
+    height: 342px;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.first-section-block {
+    display: flex;
+}
+
+.sec-table-block {
+    display: flex;
+    
+}

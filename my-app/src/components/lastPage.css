@@ -1,0 +1,76 @@
+@font-face {
+  font-family: HelveticaNeue;
+  src: url(./fonts/HelveticaNeue.ttc);
+}
+
+.main-block {
+  width: 100vw;
+  height: 100vh;
+  background-color: #4a4a4a;
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper {
+  margin-top: 271px;
+  width: 847px;
+  height: 537px;
+  background: #ffffff;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wrapper img {
+  margin-top: 30px;
+  height: 230px;
+}
+
+.wrapper p {
+  font-family: HelveticaNeue;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 31px;
+  letter-spacing: 0em;
+  margin-bottom: 80px;
+}
+
+.btn {
+  font-family: HelveticaNeue;
+  height: 60px;
+  background: #62a1eb;
+  border-radius: 8px;
+  border: none;
+  color: #fff;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 24px;
+  cursor: pointer;
+}
+
+.btn-to-list {
+  width: 300px;
+}
+
+.btn-to-main {
+  background-color: inherit;
+  color: #0089a7;
+  font-family: HelveticaNeue;
+  height: 60px;
+  color: #0089a7;
+  border-radius: 8px;
+  border: none;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 24px;
+  cursor: pointer;
+}
+
+.btn-to-main:hover {
+  color: #317ad0;
+}
+
+.btn-to-main:focus {
+  color: #1a5dab;
+}

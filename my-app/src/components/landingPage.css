@@ -1,0 +1,61 @@
+@font-face {
+  font-family: HelveticaNeue;
+  src: url(./fonts/HelveticaNeue.ttc);
+}
+
+body {
+  /* width: 1920px;
+      height: 1080px; */
+  background-color: #F7F7F7;
+}
+
+.flex {
+  display: flex;
+}
+
+.container__landing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-img__landing {
+  margin-top: 80px;
+  margin-bottom: 85px;
+  width: 112px;
+}
+
+.main-img__landing {
+  width: 781px;
+}
+
+.btn {
+  font-family: HelveticaNeue;
+  height: 60px;
+  background: #62a1eb;
+  border-radius: 8px;
+  border: none;
+  color: #fff;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 24px;
+  cursor: pointer;
+}
+
+.btn-add {
+  margin-top: 123px;
+  margin-bottom: 26px;
+  width: 387px;
+}
+
+.btn-list {
+  width: 387px;
+}
+
+.btn:hover {
+  background: #317ad0;
+}
+
+.btn:focus {
+  background: #1a5dab;
+}

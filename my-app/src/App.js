@@ -4,6 +4,8 @@ import "./App.css";
 import LandingPage from "./components/landingPage";
 import WorkerForm from './components/workerForm';
 import LaptopFrom from "./components/laptopForm";
+import LastPage from './components/lastPage';
+import LaptopInfo from './components/laptopInfo';
 
 function App() {
   return (
@@ -16,6 +18,12 @@ function App() {
       </Route>
       <Route path="/laptopform">
         <LaptopFrom />
+      </Route>
+      <Route path="/lastpage">
+        <LastPage />
+      </Route>
+      <Route path="/laptopinfo">
+        <LaptopInfo />
       </Route>
     </Switch>
   );

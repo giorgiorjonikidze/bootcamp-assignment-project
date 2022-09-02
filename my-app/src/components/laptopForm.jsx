@@ -1,8 +1,8 @@
-import React, {useState,useEffect} from 'react';
-import { useHistory } from 'react-router-dom';
-
-
-
+import React, { useState, useEffect } from "react";
+import { useHistory } from "react-router-dom";
+import backButton from "./images/Group 4.svg";
+import redberryLogo from "./images/LOGO-10 2.svg";
+import "./laptopForm.css";
 
 const LaptopFrom = () => {
   const [cpu, setCpu] = useState([]);
@@ -10,58 +10,70 @@ const LaptopFrom = () => {
 
   useEffect(() => {
     const fetchTeams = async () => {
-      const response = await fetch('https://pcfy.redberryinternship.ge/api/brands');
+      const response = await fetch(
+        "https://pcfy.redberryinternship.ge/api/brands"
+      );
       const data = await response.json();
       const laptopBrand = data.data.map((m) => {
-        return <option key={m.id}>{m.name}</option>
-      })
-      setLaptopBrand(laptopBrand)
-    }
+        return <option key={m.id}>{m.name}</option>;
+      });
+      setLaptopBrand(laptopBrand);
+    };
     fetchTeams();
-  }, [])
+  }, []);
 
   useEffect(() => {
     const fetchTeams = async () => {
-      const response = await fetch('https://pcfy.redberryinternship.ge/api/cpus');
+      const response = await fetch(
+        "https://pcfy.redberryinternship.ge/api/cpus"
+      );
       const data = await response.json();
       const cpu = data.data.map((m) => {
-        return <option key={m.id}>{m.name}</option>
-      })
-      setCpu(cpu)
-    }
+        return <option key={m.id}>{m.name}</option>;
+      });
+      setCpu(cpu);
+    };
     fetchTeams();
-  }, [])
+  }, []);
 
   const history = useHistory();
   const backPageHandler = () => {
-    const path = 'workerform'
-    history.push(path)
-    console.log('back button')
-  }
+    const path = "workerform";
+    history.push(path);
+    console.log("back button");
+  };
 
   const backToLandinPage = () => {
-    const path = '/'
-    history.push(path)
-    console.log('back button')
-  }
+    const path = "/";
+    history.push(path);
+  };
 
+  const saveHandler = () => {
+    const path = "/lastpage";
+    history.push(path);
+  };
 
   return (
     <div className="wrapper-container">
       <div className="header">
-        <button onClick={backToLandinPage}>
-          <img src="/images/Group 4.svg" alt="" />
+        <button onClick={backToLandinPage} className="back-button-header">
+          <img src={backButton} alt="" />
         </button>
         <div className="title-wrapper">
           <p className="worker-info">თანამშრომელიბის ინფო</p>
         </div>
-        <div>
+        <div className="laptop-info-wrapper">
           <p className="laptop-info">ლეპტოპის მახასიათებლები</p>
           <div className="underline"></div>
         </div>
       </div>
       <div className="form-wrapper">
         <form action="">
+          <div className="img-upload-block">
+            <input className="img-upload__input" type="file" />
+            <p className="img-upload__p">ჩააგდე ან ატვირთე ლეპტოპის ფოტო</p>
+            <button className="btn img-upload__button">ატვირთე</button>
+          </div>
           <div className="name-surname-block">
             <div className="name-input-block">
               <label for="name">ლეპტოპის სახელი</label>
@@ -74,6 +86,7 @@ const LaptopFrom = () => {
                 {laptopBrand}
               </select>
             </div>
+            {/* <div className="underline-long"></div> */}
           </div>
           <select className="select" name="" id="">
             <option value="">cpu</option>
@@ -90,8 +103,9 @@ const LaptopFrom = () => {
             <input className="input" type="text" placeholder="input" />
             <p>მხოლოდ ციფრები</p>
           </div>
+          {/* <div underline-long></div> */}
           <div className="tel-input">
-            <label for="surname">შეზენის რიცხვი(არჩევითი)</label>
+            <label for="surname">შეძენის რიცხვი(არჩევითი)</label>
             <input className="input" type="date" placeholder="input" />
           </div>
           <div className="tel-input">
@@ -105,13 +119,18 @@ const LaptopFrom = () => {
             <input type="checkbox" checked="checked" />
             <label for="">მეორადი</label>
             <input type="checkbox" checked="checked" />
-          </div>
-          <div className="btn-block">
-            <button onClick={backPageHandler} className="btn">უკან</button>
-            <button className="btn">დამახსოვრება</button>
+            <div className="btn-block">
+              <button onClick={backPageHandler} className="btn">
+                უკან
+              </button>
+              <button onClick={saveHandler} className="btn">
+                დამახსოვრება
+              </button>
+            </div>
           </div>
         </form>
       </div>
+      <img className="footer-logo" src={redberryLogo} />
     </div>
   );
 };
