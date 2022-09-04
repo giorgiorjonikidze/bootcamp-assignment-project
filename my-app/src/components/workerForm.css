@@ -42,7 +42,14 @@
 }
 
 .invalid {
-  border-color: #e52f2f;
+  border: 1.8px solid #e52f2f;
+}
+
+.invalid:focus {
+  border: 1.8px solid #e52f2f;
+}
+.invalid-select {
+  outline: 1.8px solid #e52f2f;
 }
 
 .valid {

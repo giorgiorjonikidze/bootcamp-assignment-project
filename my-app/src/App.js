@@ -25,6 +25,7 @@ function App() {
       <Route path="/laptopinfo">
         <LaptopInfo />
       </Route>
+      
     </Switch>
   );
 }

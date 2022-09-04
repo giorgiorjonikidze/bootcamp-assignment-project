@@ -172,6 +172,7 @@ label {
 }
 
 .select-laptop {
+  margin-top: 40px;
   width: 408px;
   height: 60px;
   background-color: #ebebeb;
@@ -185,6 +186,14 @@ label {
   box-sizing: border-box;
   padding-left: 16px;
 }
+
+/* .select-laptop:visited {
+  outline: none;
+}
+
+.select:visited {
+  outline: none;
+} */
 
 .btn-workerform {
   width: 176px;
@@ -226,3 +235,7 @@ label {
   border: 1px solid #C7C7C7;
   width: 500px;
 } */
+
+.invalid:focus {
+  border: 1.8px solid #e52f2f;
+}

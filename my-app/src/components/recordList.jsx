@@ -2,7 +2,7 @@ import React from 'react';
 import { useHistory } from 'react-router-dom';
 
 const RecordList = () => {
-    const historty = useHistory();
+    const history = useHistory();
     const goBackHandler = () => {
         const path = 'lastpage'
         history.pushState(path)

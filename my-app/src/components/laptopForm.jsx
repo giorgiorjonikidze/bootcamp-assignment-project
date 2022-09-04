@@ -76,7 +76,7 @@ const LaptopFrom = () => {
           </div>
           <div className="name-surname-block">
             <div className="name-input-block">
-              <label for="name">ლეპტოპის სახელი</label>
+              <label htmlFor="name">ლეპტოპის სახელი</label>
               <input className="input" type="text" placeholder="input" />
               <p>ლათინური ასოები, ციფრები, !@#$%^*()_+</p>
             </div>
@@ -94,30 +94,30 @@ const LaptopFrom = () => {
           </select>
 
           <div className="mail-input">
-            <label for="mail">cpu-ს ბირთვი</label>
+            <label htmlFor="mail">cpu-ს ბირთვი</label>
             <input className="input" type="text" placeholder="input" />
             <p>მხოლოდ ციფრები</p>
           </div>
           <div className="tel-input">
-            <label for="surname">cpu-ს ნაკადი</label>
+            <label htmlFor="surname">cpu-ს ნაკადი</label>
             <input className="input" type="text" placeholder="input" />
             <p>მხოლოდ ციფრები</p>
           </div>
           {/* <div underline-long></div> */}
           <div className="tel-input">
-            <label for="surname">შეძენის რიცხვი(არჩევითი)</label>
+            <label htmlFor="surname">შეძენის რიცხვი(არჩევითი)</label>
             <input className="input" type="date" placeholder="input" />
           </div>
           <div className="tel-input">
-            <label for="surname">ლეპტოპის ფასი</label>
+            <label htmlFor="surname">ლეპტოპის ფასი</label>
             <input className="input" type="text" placeholder="input" />
             <p>მხოლოდ ციფრები</p>
           </div>
           <div>
             <p>ლეპტოპის მდგომარეობა</p>
-            <label for="">ახალი</label>
+            <label htmlFor="">ახალი</label>
             <input type="checkbox" checked="checked" />
-            <label for="">მეორადი</label>
+            <label htmlFor="">მეორადი</label>
             <input type="checkbox" checked="checked" />
             <div className="btn-block">
               <button onClick={backPageHandler} className="btn">
